@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMark - Portal de Empregos Especializado</title>
+    
+    <style>
+        /* 1. Base Geral */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        /* 2. Cabeçalho */
+        header {
+            background-color: #ffffff;
+            border-bottom: 2px solid #e2e8f0;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-area h1 {
+            margin: 0;
+            color: #2b6cb0;
+            font-size: 22px;
+        }
+
+        nav button {
+            background-color: #edf2f7;
+            border: 1px solid #cbd5e0;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav button.ativo {
+            background-color: #3182ce;
+            color: white;
+            border-color: #3182ce;
+        }
+
+        /* 3. Conteúdo Principal Expansível */
+        main {
+            max-width: 1200px; /* Aumentado para ocupar melhor a tela */
+            margin: 30px auto;
+            padding: 0 30px;
+        }
+
+        /* Layout em Grade (Grid) de 2 Colunas */
+        .grid-topicos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 20px;
+        }
+
+        /* Cartões de Conteúdo */
+        section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .secao-video {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            color: #2d3748;
+            margin-top: 0;
+            font-size: 18px;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 8px;
+        }
+
+        /* Reprodutor do Vídeo Explicativo */
+        .video-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        video {
+            width: 100%;
+            max-width: 480px;
+            border-radius: 8px;
+            background-color: #000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        /* Layout Interno dos Cartões */
+        .flex-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .img-explicativa {
+            width: 160px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+
+        /* Tags e Detalhes */
+        .tag {
+            background-color: #e2e8f0;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 4px;
+        }
+
+        .curriculo-box {
+            background-color: #f7fafc;
+            border: 1px dashed #cbd5e0;
+            padding: 12px;
+            border-radius: 6px;
+        }
+
+        .btn-candidatar {
+            background-color: #38a169;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        /* 4. Rodapé */
+        footer {
+            background-color: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo-area">
+            <img src="logo2.jpg" alt="Logo TechMark" width="50" height="50" style="border-radius: 6px;">
+            <h1>TechMark</h1>
+        </div>
+        <nav>
+            <button class="ativo">Aba Tecnologia</button>
+            <button>Aba Marketing</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- SEÇÃO DO VÍDEO EXPLICATIVO (Em Destaque no Topo) -->
+        <section class="secao-video">
+            <h2>Vídeo Explicativo do Projeto</h2>
+            <div class="video-container">
+                <video controls poster="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80">
+                    <source src="video-explicativo.mp4" type="video/mp4">
+                    Seu navegador não suporta a exibição de vídeos.
+                </video>
+            </div>
+        </section>
+
+        <!-- GRADE COM OS 4 TÓPICOS (Organizados lado a lado) -->
+        <div class="grid-topicos">
+
+            <!-- Tópico 1 -->
+            <section>
+                <h2>1. O Problema & Nicho</h2>
+                <div class="flex-container">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=80" alt="Profissional frustrado com cadastro longo" class="img-explicativa">
+                    <div>
+                        <p style="margin: 0 0 8px 0;"><strong>Problema:</strong> Processos CLT lentos, cadastros gigantes e currículos genéricos desalinhados.</p>
+                        <p style="margin: 0;"><strong>Nicho:</strong> Contratações CLT para <strong>Tecnologia</strong> e <strong>Marketing</strong> (Presencial, Híbrido ou Home Office).</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tópico 2 -->
+            <section>
+                <h2>2. Ideia & Proposta de Valor</h2>
+                <div class="flex-container">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&q=80" alt="Equipe alinhada trabalhando junto" class="img-explicativa">
+                    <div>
+                        <p style="margin: 0 0 8px 0;"><strong>Para Empresas:</strong> Triagem rápida com currículos padronizados no mesmo formato.</p>
+                        <p style="margin: 0;"><strong>Para Candidatos:</strong> Preenchimento único do Currículo Nativo e candidatura em 1 clique.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tópico 3 -->
+            <section>
+                <h2>3. Estrutura da Vaga</h2>
+                <div class="flex-container">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&q=80" alt="Especificação detalhada das ferramentas de trabalho" class="img-explicativa">
+                    <div>
+                        <span class="tag">Home Office</span><span class="tag">CLT</span><span class="tag">Tech</span>
+                        <p style="margin: 5px 0 3px 0;"><strong>Cargo:</strong> Dev Full Stack Senior</p>
+                        <p style="margin: 0; font-size: 13px;"><strong>Especificação:</strong> Rotina diária, entregáveis e ferramentas (React, Node.js, Docker).</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tópico 4 -->
+            <section>
+                <h2>4. Currículo Nativo & 1 Clique</h2>
+                <div class="flex-container">
+                    <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&q=80" alt="Formulário simples de currículo preenchido" class="img-explicativa">
+                    <div style="flex: 1;">
+                        <div class="curriculo-box">
+                            <p style="margin: 0 0 5px 0; font-size: 13px;">Seu <strong>Currículo Nativo</strong> foi gerado e está 100% editável para fora do site.</p>
+                            <button class="btn-candidatar">Candidatar-se em 1 Clique</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 TechMark - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
